@@ -1,10 +1,10 @@
-# Transport Metrics Console Application
+# CarbonTracks: The Carbon Emission Tracker
 
-## Brief Overview
+## Overview
 This program calculates emissions, travel time, and eco-scores for different modes of transport: Bike, Jeepney, and Car. 
 It aims to encourage eco-friendly travel choices by providing users with insightful transport metrics.
 
-## Application of Python Concepts and Libraries
+## Application of Python Concepts
 1. **Object-Oriented Programming (OOP):**
    - **Abstraction:** Implemented through the `Transport` abstract class.
    - **Inheritance:** Specialized classes (`Bike`, `Jeepney`, `Car`) inherit from the `Transport` class.
@@ -13,7 +13,7 @@ It aims to encourage eco-friendly travel choices by providing users with insight
 2. **Polymorphism:**
    - Each transport mode (`Bike`, `Jeepney`, `Car`) implements its unique behavior for emissions, travel time, and eco-score calculation.
 
-## Details for SDG 13 (Climate Action)
+## SDG 13: Climate Action
 This program supports Sustainable Development Goal 13 by raising awareness about carbon emissions in daily travel. 
 By comparing the eco-score and emissions of various transport modes, users are encouraged to choose environmentally friendly options like biking.
 
