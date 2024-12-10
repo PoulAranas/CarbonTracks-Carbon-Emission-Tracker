@@ -22,6 +22,6 @@ By comparing the eco-score and emissions of various transport modes, users are e
 2. When you see the welcome sign, enter your starting location.
 4. Enter your destination.
 5. Enter the distance of the two locations in KM.
-6. Watch how the program caclculate the emmisions, travel time, and eco-score.
+6. Watch how the program caclculate the emissions, travel time, and eco-score.
 7. Input whether you would like to calculate another with a Yes or No.
 8. Exit
