@@ -18,12 +18,10 @@ This program supports Sustainable Development Goal 13 by raising awareness about
 By comparing the eco-score and emissions of various transport modes, users are encouraged to choose environmentally friendly options like biking.
 
 ## Instructions for Running the Program
-1. Ensure you have Python installed on your computer (version 3.6 or later).
-2. Save the program code to a file named `transport_metrics.py`.
-3. Open your terminal or command prompt.
-4. Navigate to the directory containing the `transport_metrics.py` file.
-5. Run the program using the following command:
-   ```bash
-   python transport_metrics.py
-   ```
-6. Follow the on-screen instructions to input route details and view transport metrics.
+1. Start the program 
+2. When you see the welcome sign, enter your starting location.
+4. Enter your destination.
+5. Enter the distance of the two locations in KM.
+6. Watch how the program caclculate the emmisions, travel time, and eco-score.
+7. Input whether you would like to calculate another with a Yes or No.
+8. Exit
