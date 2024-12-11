@@ -1,17 +1,34 @@
 CREATE TABLE TransportModes (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    mode_name VARCHAR(50) NOT NULL
-);
+    -> id INT PRIMARY KEY AUTO_INCREMENT,
+    -> mode_name VARCHAR(50) NOT NULL
+    -> );
 
--- Table to store information about routes
+CREATE TABLE CarTransportMode (
+    -> Car VARCHAR(100) NOT NULL PRIMARY KEY,
+    -> Plate_number VARCHAR(50) UNIQUE,
+    -> Car_model VARCHAR(50) NOT NULL,
+    -> Color VARCHAR(50) NOT NULL
+    -> );
+
+CREATE TABLE JeepneyTransportMode (
+    -> Jeepney VARCHAR(50) NOT NULL PRIMARY KEY,
+    -> Plate_number VARCHAR(50) UNIQUE,
+    -> Color VARCHAR(50) NOT NULL
+    -> );
+
+CREATE TABLE BikeTransportMode (
+    -> Bike VARCHAR(10) NOT NULL PRIMARY KEY,
+    -> Bike_model VARCHAR(50) NOT NULL,
+    -> Color VARCHAR(50) NOT NULL
+    -> );
+
 CREATE TABLE Routes (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    start_location VARCHAR(100) NOT NULL,
-    destination_location VARCHAR(100) NOT NULL,
-    distance DECIMAL(10, 2) NOT NULL
+    -> id INT PRIMARY KEY AUTO_INCREMENT,
+    -> start_location VARCHAR(100) NOT NULL,
+    -> destination_location VARCHAR(100) NOT NULL,
+    -> distance DECIMAL(10, 2) NOT NULL
 );
 
--- Table to store metrics for each transport mode and route
 CREATE TABLE TransportMetrics (
     id INT PRIMARY KEY AUTO_INCREMENT,
     route_id INT,
@@ -23,15 +40,9 @@ CREATE TABLE TransportMetrics (
     FOREIGN KEY (transport_mode_id) REFERENCES TransportModes(id)
 );
 
--- Insert default transport modes (Bike, Jeepney, Car)
-INSERT INTO TransportModes (mode_name) VALUES ('Bike');
-INSERT INTO TransportModes (mode_name) VALUES ('Jeepney');
-INSERT INTO TransportModes (mode_name) VALUES ('Car');
-
 INSERT INTO Routes (start_location, destination_location, distance)
 VALUES ('City A', 'City B', 120.50);
 
--- Insert transport metrics for Bike, Jeepney, and Car on a specific route (Assume route_id = 1)
 INSERT INTO TransportMetrics (route_id, transport_mode_id, emissions, travel_time, eco_score)
 VALUES 
 (1, 1, 0, (120.50 / 15) * 60, 100),  -- Bike
